@@ -61,3 +61,4 @@ def test_compute_kpi_summary():
     assert summary["totalActualMWh"] == 6000.0
     assert summary["netVolumeDeviationMWh"] == 500.0
     assert "Overforecasting" in summary["biasInterpretation"]
+

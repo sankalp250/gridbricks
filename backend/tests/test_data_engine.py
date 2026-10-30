@@ -96,3 +96,4 @@ def test_point_in_time_gate_closure_enforcement():
     kpis = res["kpis"]
     assert kpis["mae"] == 200.0
     assert kpis["bias"] == 100.0
+

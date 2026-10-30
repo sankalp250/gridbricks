@@ -68,3 +68,4 @@ logs/
 
 # Temp data cache (we will commit preprocessed lightweight seed data)
 backend/data/raw/
+

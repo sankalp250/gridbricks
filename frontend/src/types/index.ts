@@ -57,3 +57,4 @@ export interface MonthAnalysisResponse {
   worstForecastDay: DailySummary | null;
   dailyBreakdown: DailySummary[];
 }
+

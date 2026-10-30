@@ -99,3 +99,4 @@ def compute_kpi_summary(forecasts: Sequence[float], actuals: Sequence[float]) ->
         "netVolumeDeviationMWh": net_vol_dev_mwh,
         "biasInterpretation": bias_interp
     }
+

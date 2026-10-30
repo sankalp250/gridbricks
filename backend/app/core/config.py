@@ -27,3 +27,4 @@ class Settings(BaseModel):
     CORS_ORIGINS: list[str] = ["*"]
 
 settings = Settings()
+

@@ -150,3 +150,4 @@ export const MethodologyModal: React.FC<MethodologyModalProps> = ({
     </div>
   );
 };
+

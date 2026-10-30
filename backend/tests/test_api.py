@@ -23,3 +23,4 @@ def test_dates_endpoint():
     data = response.json()
     assert data["count"] == 31
     assert "2026-01-14" in data["dates"]
+
