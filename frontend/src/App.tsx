@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
+import { OverviewView } from "./components/OverviewView";
 import { KpiGrid } from "./components/KpiGrid";
 import { GenerationChart } from "./components/GenerationChart";
 import { SettlementLedger } from "./components/SettlementLedger";
@@ -17,7 +18,7 @@ import { AlertTriangleIcon, RefreshCwIcon } from "./components/Icons";
 export function App() {
   const [dates, setDates] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState<string>("2026-01-14");
-  const [activeTab, setActiveTab] = useState<"decision" | "analysis">("decision");
+  const [activeTab, setActiveTab] = useState<"overview" | "decision" | "analysis">("overview");
   const [isMethodologyOpen, setIsMethodologyOpen] = useState(false);
 
   const [decisionData, setDecisionData] = useState<DecisionResponse | null>(null);
@@ -157,6 +158,17 @@ export function App() {
           </div>
         ) : (
           <>
+            {activeTab === "overview" && (
+              <OverviewView
+                onGoToDecision={(date) => {
+                  if (date) setSelectedDate(date);
+                  setActiveTab("decision");
+                }}
+                onGoToAnalysis={() => setActiveTab("analysis")}
+                onOpenMethodology={() => setIsMethodologyOpen(true)}
+              />
+            )}
+
             {activeTab === "decision" && decisionData && (
               <div className="space-y-6">
                 {/* 1. Executive Quantitative KPIs */}
