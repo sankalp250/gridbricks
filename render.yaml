@@ -13,3 +13,4 @@ services:
         value: production
       - key: GATE_CLOSURE_TIME
         value: "09:50:00"
+
